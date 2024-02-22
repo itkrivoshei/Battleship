@@ -8,9 +8,10 @@
     "esModuleInterop": true,
     "strict": true,
     "skipLibCheck": true,
-    "outDir": "./dist",
-    "rootDir": "./src"
+    "outDir": "../dist",
+    "rootDir": "../src",
+    "jsx": "react"
   },
-  "exclude": ["node_modules", "dist"],
-  "include": ["./src/**/*.{ts,tsx}"]
+  "exclude": ["../node_modules", "../dist"],
+  "include": ["../src/**/*.ts", "../src/**/*.tsx"]
 }
