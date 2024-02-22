@@ -20,12 +20,7 @@
     "ecmaVersion": 2022,
     "sourceType": "module"
   },
-  "plugins": [
-    "react",
-    "@typescript-eslint",
-    "jest",
-    "prettier"
-  ],
+  "plugins": ["react", "@typescript-eslint", "jest", "prettier"],
   "rules": {
     "prettier/prettier": "error"
   },
