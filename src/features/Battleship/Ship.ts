@@ -1,17 +1,33 @@
+export enum Orientation {
+  Horizontal,
+  Vertical,
+}
+
 export class Ship {
   length: number;
   hits: boolean[];
+  orientation: Orientation;
 
-  constructor(length: number) {
+  constructor(
+    length: number,
+    orientation: Orientation = Orientation.Horizontal,
+  ) {
     this.length = length;
-    this.hits = Array(length).fill(false) as boolean[];
+    this.hits = Array.from({ length }, () => false);
+    this.orientation = orientation;
   }
 
   hit(position: number) {
-    this.hits[position] = true;
+    if (position < this.length) {
+      this.hits[position] = true;
+    }
   }
 
-  isSunk() {
-    return this.hits.every((hit) => hit === true);
+  isHit(position: number): boolean {
+    return this.hits[position] === true;
+  }
+
+  isSunk(): boolean {
+    return this.hits.every((hit) => hit);
   }
 }
