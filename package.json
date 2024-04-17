@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "build": "next build",
-    "dev": "next dev",
+    "deb": "next dev",
     "lint": "next lint",
     "start": "next start",
     "test": "jest --config jest.config.mjs"

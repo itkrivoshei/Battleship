@@ -1,3 +1,11 @@
+import Gameboard from "../features/Battleship/Gameboard";
+import ShipSelector from "../features/Battleship/ShipSelector";
+
 export default function Home() {
-  return <></>;
+  return (
+    <div>
+      <ShipSelector />
+      <Gameboard />
+    </div>
+  );
 }
